@@ -14,12 +14,13 @@ const defaultTheme = createTheme();
 
 export default function PageNotFound() {
   const navigate = useNavigate();
-
-
+  
   React.useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) window.location.reload();
   })
+
+
 
   return (
     <ThemeProvider theme={defaultTheme}>
