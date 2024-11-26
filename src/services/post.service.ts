@@ -1,6 +1,6 @@
 const URL = import.meta.env.VITE_BACKEND_URL;
 
-export async function listAllPosts() {
+export async function listAllPosts() { // método para listar todos os posts
   const token = localStorage.getItem("token") || '';
   const response = await fetch(`${URL}/post`, {
     method: 'GET',
@@ -19,7 +19,7 @@ export async function listAllPosts() {
   return data;
 }
 
-export async function listPostsByUser(name: string) {
+export async function listPostsByUser(name: string) { //regras de negócio para listar post por name
   const token = localStorage.getItem("token") || '';
   const response = await fetch(`${URL}/post/find?name=${name}`, {
     method: 'GET',

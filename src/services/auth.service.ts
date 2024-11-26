@@ -6,7 +6,7 @@ interface SignupParams {
 
 const URL = import.meta.env.VITE_BACKEND_URL;
 
-export async function signup(params: SignupParams) {
+export async function signup(params: SignupParams) { //método para fazer cadastro
   try {
     const response = await fetch(`${URL}/user/create`, {
       method: 'POST',
@@ -29,7 +29,7 @@ export async function signup(params: SignupParams) {
   }
 }
 
-export async function signin(params: Partial<SignupParams>) {
+export async function signin(params: Partial<SignupParams>) { //método para fazer login
   try {
     const response = await fetch(`${URL}/user/login`, {
       method: 'POST',
